@@ -75,16 +75,16 @@
                         </tr>
 
                         <tr>
-                            <td align="right" class="tHead">Detail : </td>
+                            <td align="right" class="tHead">Link : </td>
                             <td>
-                                <textarea name="detail" class="inputs tBody" placeholder="Detail" rows="10" cols="20" required=""><?php echo $get_event->detail; ?></textarea>
+                                <textarea name="detail" class="inputs tBody" placeholder="Detail" rows="10" cols="20" required=""><?php echo $get_event->link; ?></textarea>
                             </td>
                         </tr>
 
                         <tr>
-                            <td align="right" class="tHead">Location : </td>
+                            <td align="right" class="tHead">Detail : </td>
                             <td>
-                                <textarea name="location" class="inputs tBody" placeholder="Location" rows="5" cols="20" required=""><?php echo $get_event->location; ?></textarea>
+                                <textarea name="location" class="inputs tBody" placeholder="Location" rows="5" cols="20" required=""><?php echo $get_event->detail; ?></textarea>
                             </td>
                         </tr>
 

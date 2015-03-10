@@ -19,7 +19,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         
         <div class="login">
             <!--start-loginform-->
-            <form name="login-form" class="login-form" action="<?php echo base_url();?>/index.php/login/check_login" method="POST">
+            <form name="login-form" class="login-form" action="<?php echo base_url();?>index.php/login/check_login" method="POST">
                 <span class="header-top"><img src="<?php echo base_url();?>/images/topimg.png"/></span>
                 <div class="header">
                     <h1>LOGIN ADMINISTRATION</h1>

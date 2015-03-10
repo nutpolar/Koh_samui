@@ -74,7 +74,7 @@
 
                     <h2>Manage Attractions</h2>
                     <div class="box_search" id="">
-                        <form style="width:440px; float: left;" action="<?php echo base_url(); ?>/index.php/admin/get_attraction" method="post">
+                        <form style="width:440px; float: left;" action="<?php echo base_url(); ?>index.php/admin/get_attraction" method="post">
                             Select Category : 
                             <select class="" id="" name="cate_name" style="width: 195px;" required>
                                 <option name='category' value="">- Select Category -</option>
@@ -91,7 +91,7 @@
 
                             <input type="submit" value="Search"/>
                         </form>
-                        <form action="<?php echo base_url(); ?>/index.php/admin" method="post">
+                        <form action="<?php echo base_url(); ?>index.php/admin" method="post">
                             <input type="submit" value="Show All"/>
                         </form>
 

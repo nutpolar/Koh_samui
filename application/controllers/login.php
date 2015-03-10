@@ -33,8 +33,10 @@ class login extends CI_Controller {
     public function check_login() {
         $get = $this->login_m->check_login($_POST);
         if (count($get) == 0) {
+            echo 'No';
             redirect('login');
         }else{
+            echo 'Yes';
             redirect('admin');
         }
     }

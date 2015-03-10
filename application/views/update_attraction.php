@@ -116,9 +116,9 @@
                             <?php 
                                 $str = $get_attraction->picture;
                                 $ex = explode (" , ", $str);
-                                //echo '<pre>';
-                                //print_r($ex);
-                                //exit;
+//                                echo '<pre>';
+//                                print_r($str);
+//                                exit;
                             ?>
                             </td>
                             <td class="tBody">

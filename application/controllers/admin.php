@@ -205,9 +205,9 @@ class admin extends CI_Controller {
         $this->load->view('update_attraction', $data);
 
         if ($_POST) {
-            //echo '<pre>';
-            //print_r($_POST);
-            //exit;
+//            echo '<pre>';
+//            print_r($_POST);
+//            exit;
 
             $name_array = array();
             $count = count($_FILES['userfile']['size']);

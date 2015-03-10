@@ -2,11 +2,14 @@
 //echo '<pre>';
 //print_r($attraction_name);
 //exit;
+//echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+//exit;
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
+        
         <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
         <script src="Scripts/script.js"></script>
 
@@ -88,7 +91,10 @@
 
             });
 
+            
         </script>
+        
+        
 
     </head>
     <body>
@@ -215,9 +221,9 @@
                         <br/>
                         <div class="fb-share-button" data-href="<?php echo $_SERVER['REQUEST_URI']; ?>" data-layout="box_count"></div>
 
-                        <a class="twitter-share-button"
+<!--                        <a class="twitter-share-button"
                            href="https://twitter.com/share"
-                           data-url="http://goo.gl/TD7rai"
+                           data-url="<?php echo $_SERVER['REQUEST_URI']; ?>"
                            data-counturl="https://dev.twitter.com/web/tweet-button"
                            data-count="vertical">
                             Tweet
@@ -237,10 +243,10 @@
                                 };
                                 return t;
                             }(document, "script", "twitter-wjs"));
-                        </script>
+                        </script>-->
 
                         <br/>
-                        <div class="fb-comments" data-href="https://www.facebook.com/nutpoohhh" data-numposts="10" data-colorscheme="light"></div>
+                        <div class="fb-comments" data-href="<?php $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" data-numposts="10" data-colorscheme="light" data-width="500"></div>
                     </div>
                 </div>
 
