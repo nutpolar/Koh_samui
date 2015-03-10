@@ -107,7 +107,7 @@
                         </div>
                         <div class="clear"></div>
                         <div class="more">
-                            <a href="<?php echo base_url(); ?>index.php/welcome/chaweng" target="_blank">
+                            <a href="<?php echo base_url(); ?>index.php/welcome/view_attraction/139" target="_blank">
                                 <img class="" id="" src="<?php echo base_url(); ?>images/more.png"/>
                             </a>
                         </div>
@@ -125,7 +125,7 @@
                         </div>
                         <div class="clear"></div>
                         <div class="more">
-                            <a href="#">
+                            <a href="<?php echo base_url(); ?>index.php/welcome/view_attraction/149" target="_blank">
                                 <img class="" id="" src="<?php echo base_url(); ?>images/more.png"/>
                             </a>
                         </div>
@@ -144,7 +144,7 @@
                         </div>
                         <div class="clear"></div>
                         <div class="more">
-                            <a href="#">
+                            <a href="<?php echo base_url(); ?>index.php/welcome/view_attraction/148" target="_blank">
                                 <img class="" id="" src="<?php echo base_url(); ?>images/more.png"/>
                             </a>
                         </div>
@@ -163,7 +163,7 @@
                         </div>
                         <div class="clear"></div>
                         <div class="more">
-                            <a href="#">
+                            <a href="<?php echo base_url(); ?>index.php/welcome/view_attraction/140" target="_blank">
                                 <img class="" id="" src="<?php echo base_url(); ?>images/more.png"/>
                             </a>
                         </div>
@@ -184,15 +184,6 @@
 <script type="text/javascript"> /* <![CDATA[ */ 
 setTimeout('document.getElementById(\'scrnewsblock2498590\').src = (document.location.protocol == \'https:\' ? \'https\' : \'http\') + \'://www.poweringnews.com/newsjavascript.aspx?feedurl=http%3A//www.samuitimes.com/category/news/&maxitems=-1&showfeedtitle=0&showtitle=1&showdate=1&showsummary=0&showauthor=0&showactionsbox=0&showrsslink=0&showcopyright=1&opennewwindow=1&inheritstyles=0&bgcolor=%23FFFFFF&titlefontsize=12&summaryfontsize=11&fontfamily=Trebuchet%20MS&titlecolor=%230000CC&summarycolor=%23000000&sepstyle=dashed&sepcolor=%23555555&objectid=newsblock2498590\'', 500);
  /* ]]> */ </script>-->
-
-
-
-
-
-                        Content Right
-
-
-
 
 
                         <div style="line-height: 10px;background:none;">
