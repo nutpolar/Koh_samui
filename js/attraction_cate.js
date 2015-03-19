@@ -45,7 +45,7 @@ $(document).ready(function() {
             $('.cate_adventure').hide();
             $('.cate_other').hide();
         }
-        if (cate_id == "5") {
+        if (cate_id == "4") {
             $('.cate_all').hide();
             $('.cate_beach').hide();
             $('.cate_temple').hide();
@@ -53,7 +53,7 @@ $(document).ready(function() {
             $('.cate_adventure').show();
             $('.cate_other').hide();
         }
-        if (cate_id == "6") {
+        if (cate_id == "5") {
             $('.cate_all').hide();
             $('.cate_beach').hide();
             $('.cate_temple').hide();

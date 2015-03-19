@@ -34,13 +34,13 @@ class public_attraction_m extends CI_Model {
     public function get_attraction_adventure() {
         $this->db->select('tb_attraction.*,tb_category.name as cate_name');
         $this->db->join('tb_category', 'tb_attraction.category_id=tb_category.id', 'left');
-        return $this->db->where('tb_category.id',5)->get('tb_attraction')->result();
+        return $this->db->where('tb_category.id',4)->get('tb_attraction')->result();
     }
     
     public function get_attraction_other() {
         $this->db->select('tb_attraction.*,tb_category.name as cate_name');
         $this->db->join('tb_category', 'tb_attraction.category_id=tb_category.id', 'left');
-        return $this->db->where('tb_category.id',6)->get('tb_attraction')->result();
+        return $this->db->where('tb_category.id',5)->get('tb_attraction')->result();
     }
     
     public function get_view_attraction($id) {

@@ -9,7 +9,7 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
-        
+
         <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
         <script src="Scripts/script.js"></script>
 
@@ -91,10 +91,10 @@
 
             });
 
-            
+
         </script>
-        
-        
+
+
 
     </head>
     <body>
@@ -211,7 +211,7 @@
                                     return;
                                 js = d.createElement(s);
                                 js.id = id;
-                                js.src = "//connect.facebook.net/th_TH/sdk.js#xfbml=1&appId=1401334993460122&version=v2.0";
+                                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1401334993460122&version=v2.0";
                                 fjs.parentNode.insertBefore(js, fjs);
                             }(document, 'script', 'facebook-jssdk'));</script>
 
@@ -219,35 +219,51 @@
 
 
                         <br/>
-                        <div class="fb-share-button" data-href="<?php echo $_SERVER['REQUEST_URI']; ?>" data-layout="box_count"></div>
 
-<!--                        <a class="twitter-share-button"
-                           href="https://twitter.com/share"
-                           data-url="<?php echo $_SERVER['REQUEST_URI']; ?>"
-                           data-counturl="https://dev.twitter.com/web/tweet-button"
-                           data-count="vertical">
-                            Tweet
-                        </a>
-                        <script>
-                            window.twttr = (function(d, s, id) {
-                                var js, fjs = d.getElementsByTagName(s)[0], t = window.twttr || {};
-                                if (d.getElementById(id))
-                                    return;
-                                js = d.createElement(s);
-                                js.id = id;
-                                js.src = "https://platform.twitter.com/widgets.js";
-                                fjs.parentNode.insertBefore(js, fjs);
-                                t._e = [];
-                                t.ready = function(f) {
-                                    t._e.push(f);
-                                };
-                                return t;
-                            }(document, "script", "twitter-wjs"));
-                        </script>-->
+                        <div class="share_socail">
+                            <div style="float: left; margin-right: 10px;">
+                                <div class="fb-share-button" data-lang="eng" data-href="<?php echo base_url(); ?>index.php/welcome/view_attraction/<?php echo $attraction_name->id; ?>" data-layout="box_count"></div>
+                            </div>
+
+                            <div style="float:left; margin-right: 10px;">
+                                <script>
+                                    window.twttr = (function(d, s, id) {
+                                        var js, fjs = d.getElementsByTagName(s)[0], t = window.twttr || {};
+                                        if (d.getElementById(id))
+                                            return;
+                                        js = d.createElement(s);
+                                        js.id = id;
+                                        js.src = "https://platform.twitter.com/widgets.js";
+                                        fjs.parentNode.insertBefore(js, fjs);
+                                        t._e = [];
+                                        t.ready = function(f) {
+                                            t._e.push(f);
+                                        };
+                                        return t;
+                                    }(document, "script", "twitter-wjs"));
+                                </script>
+                                <a class="twitter-share-button"
+                                   href="https://twitter.com/share"
+                                   data-url="<?php echo base_url(); ?>index.php/welcome/view_attraction/<?php echo $attraction_name->id; ?>"
+                                   
+                                   data-count="vertical">
+                                    Tweet
+                                </a>
+                            </div>
+
+
+                            <script src="https://apis.google.com/js/platform.js" async defer></script>
+                            <div style="float:left; margin-right: 10px;">
+
+                                <div class="g-plus" data-action="share" data-annotation="vertical-bubble" data-height="60" data-href="<?php echo base_url(); ?>index.php/welcome/view_attraction/<?php echo $attraction_name->id; ?>"></div>
+                            </div>
+                        </div>
+
 
                         <br/>
-                        <div class="fb-comments" data-href="<?php $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" data-numposts="10" data-colorscheme="light" data-width="500"></div>
+                        <div class="fb-comments" data-href="<?php echo base_url(); ?>index.php/welcome/view_attraction/<?php echo $attraction_name->id; ?>" data-numposts="10" data-colorscheme="light" data-width="500"></div>
                     </div>
+
                 </div>
 
                 <div class="content_detail">
