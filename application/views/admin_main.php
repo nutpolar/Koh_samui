@@ -308,7 +308,7 @@
                                 ?>
                                 <tr align="center" id="category_id">
                                     <td><?php echo $num; ?></td>
-                                    <td align="left" style="padding-left:20px;"><?php echo $value->name; ?></td>
+                                    <td align="left" style="padding-left:20px;"><?php echo $value->title; ?></td>
                                     <td><?php echo date("d M Y", strtotime($value->date)); ?></td>
                                     
                                     <td>

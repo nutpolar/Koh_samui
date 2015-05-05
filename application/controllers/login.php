@@ -22,6 +22,10 @@ class login extends CI_Controller {
      */
     public function __construct() {
         parent::__construct();
+//        if ($this->session->userdata('username') != "") {
+//            redirect('admin');
+//        }
+        //$this->load->library('session');
         // Your own constructor code
         $this->load->model('login_m');
     }
@@ -31,17 +35,30 @@ class login extends CI_Controller {
     }
 
     public function check_login() {
+
         $get = $this->login_m->check_login($_POST);
+//        if (count($get) == 0) {
+//            echo 'No';
+//            redirect('login');
         if (count($get) == 0) {
-            echo 'No';
-            redirect('login');
-        }else{
-            echo 'Yes';
-            redirect('admin');
+            echo "<script>
+            alert('Username or Password Invalid');
+            window.location.replace('../login');
+            </script>";
+        } else {
+            echo "<script>
+            alert('Welcome Admin');
+            window.location.replace('../admin');
+            </script>";
         }
     }
 
     public function logout() {
+        
+        $sess_array = array(
+            'username' => ''
+        );
+        $this->session->unset_userdata('logged_in', $sess_array);
         $this->session->sess_destroy();
         redirect('login');
     }

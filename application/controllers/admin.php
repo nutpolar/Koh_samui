@@ -22,17 +22,26 @@ class admin extends CI_Controller {
      * @see http://codeigniter.com/user_guide/general/urls.html
      */
     public function __construct() {
-        parent::__construct();
+        parent::__construct(); 
+       
+        
+//        if ($this->session->userdata('username') == "") {
+//            echo 'login';
+//            $s = $this->session->userdata('username');
+//            echo $s;
+//            exit;
+//            redirect('login');
+//        }
 
         $this->load->model('category_m');
         $this->load->model('attraction_m');
         $this->load->model('event_m');
         $this->load->helper(array('form', 'url'));
         $this->load->library('pagination');
+        $this->load->library('session');
     }
 
     public function index() {
-        
         $data['category_name'] = $this->category_m->get_category();
         $data['event_name'] = $this->event_m->get_event();
         //$data['attraction_name'] = $this->attraction_m->get_attraction();

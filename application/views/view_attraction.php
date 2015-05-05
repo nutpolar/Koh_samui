@@ -99,6 +99,7 @@
     </head>
     <body>
         <div class="header">
+<!--            <img class="" id="" src="<?php echo base_url(); ?>images/logo_web.png" />-->
             <img class="" id="" src="<?php echo base_url(); ?>images/header_web.png" />
 
         </div>

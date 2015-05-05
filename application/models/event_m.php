@@ -105,10 +105,10 @@ class event_m extends CI_Model {
         $star_exp = explode(" ", $input['date']);
         $date = strtotime($star_exp[2] . "-" . $star_exp[1] . "-" . $star_exp[0]);
         $data = array(
-            'name' => $input['name'],
+            'title' => $input['name'],
             'date' => date('Y-m-d 00:00:00', $date),
+            'url' => $input['link'],
             'detail' => $input['detail'],
-            'location' => $input['location'],
         );
         $this->db->insert('tb_event', $data);
         return TRUE;
@@ -119,8 +119,8 @@ class event_m extends CI_Model {
         $data = array(
             'name' => $input['name'],
             'date' => date('Y-m-d 00:00:00', $date),
+            'url' => $input['link'],
             'detail' => $input['detail'],
-            'location' => $input['location'],
         );
         $this->db->where('id',$event_id);
         $this->db->update('tb_event',$data);

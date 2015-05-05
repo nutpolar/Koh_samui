@@ -48,10 +48,15 @@
 $active_group = 'default';
 $active_record = TRUE;
 
+//$db['default']['hostname'] = 'localhost';
+//$db['default']['username'] = 'project3_samui';
+//$db['default']['password'] = '71zBWZEw';
+//$db['default']['database'] = 'project3_samui';
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'project3_samui';
-$db['default']['password'] = '71zBWZEw';
-$db['default']['database'] = 'project3_samui';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '';
+$db['default']['database'] = 'samui_db';
+
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
