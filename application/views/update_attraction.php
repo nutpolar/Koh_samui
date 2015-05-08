@@ -20,6 +20,27 @@
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>/css/style_admin.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>/css/style_box.css" media="screen" type="text/css" />
         <script src="<?php echo base_url(); ?>/js/index.js"></script>
+        
+        <script type="text/javascript">
+            function checkText(id)
+            {
+                var elem = document.getElementById(id).value;
+                    if (elem.match(/^([ก-๑])+$/i))
+                    {
+                        alert("Please !! fill English only");
+                        document.getElementById(id).value = "";
+                    }
+            }
+
+            function chkNumber(ele)
+            {
+                var vchar = String.fromCharCode(event.keyCode);
+                if ((vchar < '0' || vchar > '9') && (vchar != '.'))
+                    return false;
+                ele.onKeyPress = vchar;
+            }
+
+        </script>
 
         <script>
             $(function() {
@@ -85,20 +106,20 @@
 
                         <tr>
                             <td align="right" class="tHead">Name : </td>
-                            <td><input type="text"class="inputs tBody" placeholder="Attraction Name" name="name" value="<?php echo $get_attraction->name; ?>"/></td>
+                            <td><input type="text"class="inputs tBody" placeholder="Attraction Name" name="name" id="name" onchange="checkText('name');" value="<?php echo $get_attraction->name; ?>"/></td>
                         </tr>
 
                         <tr>
                             <td align="right" class="tHead">Detail : </td>
                             <td>
-                                <textarea name="detail" class="inputs tBody" placeholder="Detail" rows="10" cols="20"><?php echo $get_attraction->detail; ?></textarea>
+                                <textarea name="detail" class="inputs tBody" placeholder="Detail" rows="10" cols="20" id="detail" onchange="checkText('detail');"><?php echo $get_attraction->detail; ?></textarea>
                             </td>
                         </tr>
 
                         <tr>
                             <td align="right" class="tHead">Address : </td>
                             <td>
-                                <textarea name="address" class="inputs tBody" placeholder="Address" rows="5" cols="20"><?php echo $get_attraction->address; ?></textarea>
+                                <textarea name="address" class="inputs tBody" placeholder="Address" rows="5" cols="20" id="address" onchange="checkText('address');"><?php echo $get_attraction->address; ?></textarea>
                             </td>
                         </tr>
 
@@ -148,29 +169,29 @@
                             <td align="right" class="tHead">Contact : </td>
                             <td>
     <!--                                            <input type="text"class="inputs" placeholder="Contact"/>-->
-                                <textarea name="contact" class="inputs tBody" placeholder="Contact" rows="3" cols="20" ><?php echo $get_attraction->contact; ?></textarea>
+                                <textarea name="contact" class="inputs tBody" placeholder="Contact" rows="3" cols="20" id="contact" onchange="checkText('contact');"><?php echo $get_attraction->contact; ?></textarea>
                             </td>
                         </tr>
 
                         <tr>
                             <td align="right" class="tHead">Latitude : </td>
-                            <td><input type="text" name="latitude" class="inputs tBody" placeholder="Latitude" value="<?php echo $get_attraction->latitude; ?>"/></td>
+                            <td><input type="text" name="latitude" class="inputs tBody" placeholder="Latitude" OnKeyPress="return chkNumber(this)" value="<?php echo $get_attraction->latitude; ?>"/></td>
                         </tr>
 
                         <tr>
                             <td align="right" class="tHead">Longitude : </td>
-                            <td><input type="text" name="longitude" class="inputs tBody" placeholder="Longitude" value="<?php echo $get_attraction->longitude; ?>"/></td>
+                            <td><input type="text" name="longitude" class="inputs tBody" placeholder="Longitude" OnKeyPress="return chkNumber(this)" value="<?php echo $get_attraction->longitude; ?>"/></td>
                         </tr>
 
 
                         <tr>
                             <td align="right" class="tHead">Open Time/Close Time : </td>
-                            <td><input type="text" name="open" class="inputs tBody" placeholder="Time" value="<?php echo $get_attraction->time; ?>"/></td>
+                            <td><input type="text" name="open" class="inputs tBody" placeholder="Time" id="time" onchange="checkText('time');" value="<?php echo $get_attraction->time; ?>"/></td>
                         </tr>
 
                         <tr>
                             <td align="right" class="tHead">Service Charge : </td>
-                            <td><input type="text" name="service" class="inputs tBody" placeholder="Service Charge" value="<?php echo $get_attraction->service; ?>"/></td>
+                            <td><input type="text" name="service" class="inputs tBody" placeholder="Service Charge" id="service" onchange="checkText('service');" value="<?php echo $get_attraction->service; ?>"/></td>
                         </tr>
 
                         <tr>

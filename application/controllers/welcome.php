@@ -64,18 +64,7 @@ class Welcome extends CI_Controller {
     
     public function samui_event() {
         $data['event_name'] = $this->event_m->get_event();
-        $data['event_jan'] = $this->event_m->get_event_jan();
-        $data['event_feb'] = $this->event_m->get_event_feb();
-        $data['event_mar'] = $this->event_m->get_event_mar();
-        $data['event_apr'] = $this->event_m->get_event_apr();
-        $data['event_may'] = $this->event_m->get_event_may();
-        $data['event_jun'] = $this->event_m->get_event_jun();
-        $data['event_jul'] = $this->event_m->get_event_jul();
-        $data['event_aug'] = $this->event_m->get_event_aug();
-        $data['event_sep'] = $this->event_m->get_event_sep();
-        $data['event_oct'] = $this->event_m->get_event_oct();
-        $data['event_nov'] = $this->event_m->get_event_nov();
-        $data['event_dec'] = $this->event_m->get_event_dec();
+       
         $this->load->view('samui_event',$data);
     }
     

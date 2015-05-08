@@ -91,6 +91,7 @@ class admin extends CI_Controller {
 
     public function count_get_attraction($s_cate_name, $page = 0) {
         $data['category_name'] = $this->category_m->get_category();
+        
         //$data['attraction_name'] = $this->attraction_m->get_attraction();
 
         $s_cate_name = $this->input->post('cate_name') ? $this->input->post('cate_name') : str_replace("-", "", $s_cate_name);
@@ -105,10 +106,11 @@ class admin extends CI_Controller {
         $config['total_rows'] = $this->attraction_m->count_get_attraction($base_where);
         $config['per_page'] = 15;
         $config['uri_segment'] = 4;
-
+        
         $data['attraction_name'] = $this->attraction_m->get_attraction($base_where, $config['per_page'], $page);
         $this->pagination->initialize($config);
         $data['base_where'] = $base_where;
+        
 
         $this->load->view('admin_main', $data);
     }
@@ -208,7 +210,9 @@ class admin extends CI_Controller {
 
     public function update_attraction($id) {
         $data['category_name'] = $this->category_m->get_category();
+        
         $data['get_attraction'] = $this->attraction_m->get_edit_attraction($id);
+        
         //echo '<pre>';        print_r($data); exit;
 
         $this->load->view('update_attraction', $data);
@@ -293,6 +297,7 @@ class admin extends CI_Controller {
     public function update_category($cate_id) {
         $data['category_name'] = $this->category_m->get_category();
         //$data['attraction_name'] = $this->attraction_m->get_attraction();
+        $data['event_name'] = $this->event_m->get_event();
         $data['edit_category_name'] = $this->category_m->get_edit_category($cate_id);
         
         

@@ -21,6 +21,27 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>/css/style_box.css" media="screen" type="text/css" />
         <script src="<?php echo base_url(); ?>/js/index.js"></script>
 
+        <script type="text/javascript">
+            function checkText(id)
+            {
+                var elem = document.getElementById(id).value;
+                    if (elem.match(/^([ก-๑])+$/i))
+                    {
+                        alert("Please !! fill English only");
+                        document.getElementById(id).value = "";
+                    }
+            }
+
+            function chkNumber(ele)
+            {
+                var vchar = String.fromCharCode(event.keyCode);
+                if ((vchar < '0' || vchar > '9') && (vchar != '.'))
+                    return false;
+                ele.onKeyPress = vchar;
+            }
+
+        </script>
+        
         <script>
             $(function() {
                 $("#tabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
@@ -66,7 +87,7 @@
                     <table width="100%">
                         <tr>
                             <td align="right" class="tHead">Event Name : </td>
-                            <td><input type="text"class="inputs tBody" placeholder="Event Name" name="name" required="" value="<?php echo $get_event->name; ?>"/></td>
+                            <td><input type="text"class="inputs tBody" placeholder="Event Name" name="name" id="name" onchange="checkText('name');" required="" value="<?php echo $get_event->title; ?>"/></td>
                         </tr>
 
                         <tr>
@@ -77,14 +98,14 @@
                         <tr>
                             <td align="right" class="tHead">Link : </td>
                             <td>
-                                <textarea name="detail" class="inputs tBody" placeholder="Link" rows="10" cols="20" required=""><?php echo $get_event->link; ?></textarea>
+                                <textarea name="detail" class="inputs tBody" placeholder="Link" rows="10" cols="20" id="link" onchange="checkText('link');"><?php echo $get_event->url; ?></textarea>
                             </td>
                         </tr>
 
                         <tr>
                             <td align="right" class="tHead">Detail : </td>
                             <td>
-                                <textarea name="location" class="inputs tBody" placeholder="Detail" rows="5" cols="20" required=""><?php echo $get_event->detail; ?></textarea>
+                                <textarea name="location" class="inputs tBody" placeholder="Detail" rows="5" cols="20" id="detail" onchange="checkText('detail');"><?php echo $get_event->detail; ?></textarea>
                             </td>
                         </tr>
 

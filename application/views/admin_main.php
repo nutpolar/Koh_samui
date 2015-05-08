@@ -1,4 +1,8 @@
-
+<?php
+//echo '<pre>';
+//print_r($event_name);
+////exit;
+?>
 <!doctype html>
 <html lang="en">
     <head>
@@ -21,6 +25,27 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>/css/style_box.css" media="screen" type="text/css" />
         <script src="<?php echo base_url(); ?>/js/index.js"></script>
 
+         <script type="text/javascript">
+            function checkText(id)
+            {
+                var elem = document.getElementById(id).value;
+                    if (elem.match(/^([ก-๑])+$/i))
+                    {
+                        alert("Please !! fill English only");
+                        document.getElementById(id).value = "";
+                    }
+            }
+
+            function chkNumber(ele)
+            {
+                var vchar = String.fromCharCode(event.keyCode);
+                if ((vchar < '0' || vchar > '9') && (vchar != '.'))
+                    return false;
+                ele.onKeyPress = vchar;
+            }
+
+        </script>
+        
         <script>
             $(function() {
                 $("#tabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
@@ -171,7 +196,7 @@
                                     <table width="100%">
                                         <tr>
                                             <td align="right">Category Name : </td>
-                                            <td align="center"><input type="text"class="inputs2" placeholder="Category Name" name="category_name"/></td>
+                                            <td align="center"><input type="text"class="inputs2" placeholder="Category Name" name="category_name" id="name" onblur="checkText('name');" required=""/></td>
                                             <td align="right"><input type="submit" class="button" value="ADD"/></td>
                                         </tr>
                                     </table>
@@ -197,7 +222,7 @@
                                         <tr>
                                             <td align="right">Category Name : </td>
                                             <td align="center">
-                                                <input type="text"class="inputs2" placeholder="Category Name" name="category_name" value="<?php echo @$edit_category_name->name; ?>"/>
+                                                <input type="text"class="inputs2" placeholder="Category Name" name="category_name" id="name" onblur="checkText('name');" value="<?php echo @$edit_category_name->name; ?>"/>
                                                 <input type="hidden" id="id_cate" name="id_cate" value="<?php echo @$this->uri->segment(3); ?>"/>
                                             </td>
                                             <td align="center">
