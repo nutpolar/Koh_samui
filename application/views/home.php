@@ -203,10 +203,16 @@ setTimeout('document.getElementById(\'scrnewsblock2498590\').src = (document.loc
                                 <div style="text-align: center; width: 160px;"></div>
 
                             </div>
-
+                            
                         </div>
-
+                    
                     <br/>
+                    <div>
+                        <a href="<?php echo base_url(); ?>SamuiApp.apk">
+                            <img class="" id="" src="<?php echo base_url(); ?>images/logo_download.png"/>
+                        </a>
+                    </div>
+                    </center>
                 </div>
 
 
